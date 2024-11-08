@@ -1,0 +1,14 @@
+version: 4.1.9
+steps:
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: >-
+      Assert that the "Advertising" link is visible and clickable.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Advertising
+        description: footer link
+        action: click
