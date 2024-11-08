@@ -1,0 +1,14 @@
+version: 4.1.9
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: >-
+      Assert that the "Sign in" button is visible and clickable.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Sign in
+        description: Sign in button on the Google homepage
+        action: click
